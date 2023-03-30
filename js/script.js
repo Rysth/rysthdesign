@@ -27,8 +27,8 @@ home__button.addEventListener("click", () => {
 
 /* Portfolio Section - Cards */
 
-const portfolio__cards = document.querySelector(
-	"#portfolio__cards"
+const customer__cards = document.querySelector(
+	"#customer__cards"
 );
 
 /* Portfolio Section - Viewer Popup Image */
@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
 		picture.appendChild(source);
 		card__content.appendChild(picture);
 		customer__card.appendChild(card__content);
-		portfolio__cards.appendChild(customer__card);
+		customer__cards.appendChild(customer__card);
 	}
 });
 
