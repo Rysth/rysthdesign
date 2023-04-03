@@ -83,6 +83,10 @@ button {
 	cursor: pointer;
 }
 
+i {
+	cursor: pointer;
+}
+
 a,
 p,
 button,
@@ -152,6 +156,7 @@ h5 {
 	display: inline-block;
 	margin: 1.5em 0;
 	font-family: var(--FF-primary-montserrat);
+	transition: 0.2s all;
 }
 
 .button-primary {
@@ -159,16 +164,25 @@ h5 {
 	color: var(--CL-primary-500);
 	padding: 1em 1.5em;
 	box-shadow: 6px 6px 0 var(--CL-primary-600);
-	transition: 0.2s all;
 }
 
 .button-secondary {
 	background-color: var(--CL-primary-500);
 	color: var(--CL-neutral-white);
 	padding: 0.75em 1em;
+}
+
+.button-action {
+	background-color: var(--CL-neutral-black);
+	color: var(--CL-neutral-white);
+	padding: 0.5em;
+	margin: 0 0.15em;
 	border-radius: 0.25em;
-	transition: background-color 0.2s, color 0.2s,
-		transform 0.2s;
+	width: 2em;
+}
+
+.display-none {
+	display: none;
 }
 
 .grid {
@@ -256,7 +270,7 @@ h5 {
 	top: 100%;
 	left: 0;
 	right: 0;
-	transform: translateY(-130%);
+	transform: translateY(-250%);
 	transition: transform 0.35s ease-in-out;
 }
 
@@ -269,6 +283,58 @@ h5 {
 
 main {
 	margin-top: calc(7em + 1vh);
+}
+
+/* Table */
+
+.overflow-scroll {
+	overflow: auto;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid var(--CL-neutral-black);
+}
+
+.table__title {
+	font-size: calc(var(--FS-primary-4) + 0.5rem);
+	padding: 1em 0 0.9em 0;
+	text-transform: uppercase;
+}
+
+.table__subtitle {
+	background-color: var(--CL-neutral-black);
+}
+
+.subtitle__data {
+	font-family: var(--FF-primary-invisible);
+	font-size: var(--FS-primary-4);
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0.25em 0 0.15em 0;
+}
+
+.table__content {
+	text-align: center;
+	background-color: var(--CL-neutral-white);
+	color: var(--CL-neutral-black);
+	font-weight: 600;
+}
+
+.content__data {
+	font-size: var(--FS-primary-5);
+	border: 1px solid var(--CL-neutral-black);
+	padding: 0.25em;
+	min-width: 7rem;
+}
+
+.content__data--name {
+	min-width: 15rem;
+}
+
+.table__content--game {
+	font-weight: 400;
 }
 
 /* Section Styles */
@@ -407,12 +473,22 @@ main {
 	max-width: 30rem;
 }
 
+.form--full {
+	max-width: 100%;
+}
+
 .form__group {
 	display: grid;
 	border: none;
-	gap: 1em;
+	gap: 0.5em;
 	font-size: var(--FS-primary-5);
 	padding: 0.5em 0;
+}
+
+.form__group--flex {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .form__label {
@@ -527,6 +603,10 @@ main {
 		color: var(--CL-neutral-black);
 		transform: scale(1.05);
 	}
+	.button-action:hover {
+		background-color: var(--CL-primary-600);
+		color: var(--CL-neutral-white);
+	}
 
 	/* Section Styles */
 
@@ -566,7 +646,7 @@ main {
 		grid-template-columns: repeat(4, 1fr);
 	}
 	.grid-auto-columns {
-		grid-auto-flow: column;
+		max-width: 100%;
 	}
 
 	/* Footer Styles */
