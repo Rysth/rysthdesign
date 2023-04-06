@@ -45,7 +45,7 @@ viewer__image.setAttribute("alt", "Viewer image popup");
 /* Loads every Customer Card */
 
 window.addEventListener("load", () => {
-	for (let index = 1; index <= 8; index++) {
+	for (let index = 1; index <= 12; index++) {
 		const customer__card = document.createElement("div");
 		customer__card.classList.add("card", "padding-0");
 		const card__content = document.createElement("div");
@@ -58,7 +58,7 @@ window.addEventListener("load", () => {
 		card__image.classList.add("card__image");
 		card__image.setAttribute(
 			"src",
-			"img/steam/WEBP/steam_0" + index + ".webp"
+			"img/steam/WEBP/steam_" + index + ".webp"
 		);
 		card__image.setAttribute("loading", "lazy");
 		card__image.setAttribute(
