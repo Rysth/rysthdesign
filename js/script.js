@@ -1,85 +1,81 @@
 /* Navbar Show/Hide - Scripts */
 
-const navbar__button = document.querySelector(
-	"#navbar__toggle"
-);
-const navbar__list =
-	document.querySelector(".navbar__list");
+const headerToggle = document.querySelector("#header__toggle");
+const headerList = document.querySelector(".header__list");
 
 document.addEventListener("click", (e) => {
-	if (e.target !== navbar__button) {
-		navbar__list.classList.remove("show");
+	if (e.target !== headerToggle) {
+		headerList.classList.remove("show");
 	}
 });
 
-navbar__button.addEventListener("click", () => {
-	navbar__list.classList.toggle("show");
-});
-
-/* Home Section - Back to Top of Document*/
-
-const home__button =
-	document.querySelector("#home__button");
-
-home__button.addEventListener("click", () => {
-	window.scroll(0, 0);
+headerToggle.addEventListener("click", () => {
+	headerList.classList.toggle("show");
 });
 
 /* Portfolio Section - Cards */
 
-const customer__cards = document.querySelector(
-	"#customer__cards"
-);
+const customerCards = document.querySelector("#customer__cards");
 
 /* Portfolio Section - Viewer Popup Image */
 
 const viewer = document.querySelector(".viewer");
-const viewer__icon =
-	document.querySelector(".viewer__icon");
+const viewer__icon = document.querySelector(".viewer__icon");
 
 //Setting up image element
-const viewer__image = document.createElement("img");
-viewer__image.className = "viewer__image";
-viewer__image.setAttribute("alt", "Viewer image popup");
+const viewerImage = document.createElement("img");
+viewerImage.className = "viewer__image";
+viewerImage.setAttribute("alt", "Viewer image popup");
 
 /* Loads every Customer Card */
 
 window.addEventListener("load", () => {
 	for (let index = 1; index <= 12; index++) {
-		const customer__card = document.createElement("div");
-		customer__card.classList.add("card", "padding-0");
-		const card__content = document.createElement("div");
-		card__content.classList.add("card__content", "padding-0");
-		const picture = document.createElement("picture");
-		const source = document.createElement("source");
-		source.srcset = "img/steam/PNG/steam_0" + index + ".png";
-		source.type = "image/png";
-		const card__image = document.createElement("img");
-		card__image.classList.add("card__image");
-		card__image.setAttribute(
+		const newCard = document.createElement("div");
+		newCard.classList.add("card", "padding-0");
+
+		const newContent = document.createElement("div");
+		newContent.classList.add("card__content", "padding-0");
+
+		const newPicture = document.createElement("picture");
+		const newSource = document.createElement("source");
+		newSource.srcset = `img/steam/PNG/steam_0"${index}".png`;
+		newSource.type = "image/png";
+
+		const newImage = document.createElement("img");
+		newImage.setAttribute(
 			"src",
 			"img/steam/WEBP/steam_" + index + ".webp"
 		);
-		card__image.setAttribute("loading", "lazy");
-		card__image.setAttribute(
-			"alt",
-			"Customer evidence number " + index
-		);
-		card__image.addEventListener("click", () => {
-			viewer__image.src = card__image.getAttribute("src");
-			viewer.appendChild(viewer__image);
+		newImage.setAttribute("loading", "lazy");
+		newImage.setAttribute("alt", "Customer evidence number " + index);
+		newImage.addEventListener("click", () => {
+			viewerImage.src = newImage.getAttribute("src");
+			viewer.appendChild(viewerImage);
 			toggleViewer(viewer);
 		});
-		picture.appendChild(card__image);
-		picture.appendChild(source);
-		card__content.appendChild(picture);
-		customer__card.appendChild(card__content);
-		customer__cards.appendChild(customer__card);
+
+		newPicture.appendChild(newImage);
+		newPicture.appendChild(newSource);
+
+		newContent.appendChild(newPicture);
+		newCard.appendChild(newContent);
+
+		customerCards.appendChild(newCard);
+	}
+});
+
+window.addEventListener("keyup", (event) => {
+	if (
+		event.key === "Escape" &&
+		viewer.classList.contains("viewer--active")
+	) {
+		toggleViewer(viewer);
 	}
 });
 
 viewer__icon.addEventListener("click", () => {
-	viewer.removeChild(viewer__image);
+	viewer.removeChild(viewerImage);
 	toggleViewer(viewer);
 });
 
@@ -99,5 +95,5 @@ verticalScroll.reveal(".section", {
 });
 
 verticalScroll.reveal(".card, .form", {
-	delay: 400,
+	delay: 300,
 });

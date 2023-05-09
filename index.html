@@ -9,12 +9,12 @@
 		/>
 		<meta
 			name="description"
-			content="Venta de Juegos Originales & Chatbots Whatsapp personalizados para Emprendimiento o Pequeños Negocios."
+			content="Venta de Juegos en Línea & Desarrollo Web HTML/CSS/JS para Emprendimiento o Pequeños Negocios."
 		/>
 		<title>
-			Rysth Design | Venta de Juegos & Chatbots para Whatsapp
+			Rysth Design | Venta de Juegos en Línea & Desarrollo Web
+			HTML/CSS/JS
 		</title>
-		<link rel="stylesheet" href="css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -22,6 +22,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link rel="stylesheet" href="css/style.css" />
 		<link
 			rel="shortcut icon"
 			href="img/LOGO-ONLY.svg"
@@ -32,40 +33,33 @@
 		<header class="header">
 			<div class="container">
 				<nav class="header__navbar">
-					<a class="navbar__logo" href="#">
+					<a class="header__logo" href="index.html">
 						<img
 							loading="lazy"
 							src="img/LOGO-HORIZONTAL.svg"
 							alt="Logo Rysth Design"
 						/>
 					</a>
-					<span class="button">
-						<i
-							class="fa-solid fa-bars"
-							id="navbar__toggle"
-							aria-hidden="true"
-						></i>
-					</span>
-					<ul class="navbar__list">
-						<li class="navbar__item">
-							<a
-								class="navbar__link"
-								href="index.html"
-								id="home__button"
-								>Inicio</a
-							>
+					<i
+						class="fa-solid fa-bars header__toggle"
+						id="header__toggle"
+						aria-hidden="true"
+					></i>
+					<ul class="header__list">
+						<li class="header__item">
+							<a class="header__link" href="#" id="home__button">Inicio</a>
 						</li>
-						<li class="navbar__item">
-							<a class="navbar__link" href="#about">Acerca</a>
+						<li class="header__item">
+							<a class="header__link" href="#about">Acerca</a>
 						</li>
-						<li class="navbar__item">
-							<a class="navbar__link" href="#services">Servicios</a>
+						<li class="header__item">
+							<a class="header__link" href="#services">Servicios</a>
 						</li>
-						<li class="navbar__item">
-							<a class="navbar__link" href="#customers">Clientes</a>
+						<li class="header__item">
+							<a class="header__link" href="#customers">Clientes</a>
 						</li>
-						<li class="navbar__item">
-							<a class="navbar__link" href="#contacts">Contactos</a>
+						<li class="header__item">
+							<a class="header__link" href="#contacts">Contactos</a>
 						</li>
 					</ul>
 				</nav>
@@ -83,15 +77,15 @@
 									<h4>Bienvenidos a</h4>
 									<h1>Rysth Design</h1>
 									<h4>
-										Soy un Desarrollador de -
-										<span class="fw-bold">Chatbots</span>.
+										Desarrollo Web con
+										<span class="fw-bold">HTML/CSS/JS</span>.
 									</h4>
 								</div>
 								<div>
 									<p class="max-width-75">
-										Creador especializado en el desarrollo de Chatbots
-										automatizados para Whatsapp y Venta de Juegos para
-										todas las plataformas de pc.
+										Diseñador especializado en el desarrollo de sitios web
+										estáticos y Venta de Juegos en línea para todas las
+										plataformas de computadora.
 									</p>
 								</div>
 								<div class="section__buttons">
@@ -105,6 +99,7 @@
 							</header>
 							<div>
 								<img
+									class="image"
 									loading="lazy"
 									src="img/LOGO-ONLY.svg"
 									alt="Brand logo hero image"
@@ -120,40 +115,30 @@
 							<div>
 								<picture>
 									<source
-										srcset="img/steam/PNG/steam_11.png"
+										srcset="img/steam/PNG/steam_10.png"
 										type="image/png"
 									/>
 									<img
 										loading="lazy"
-										src="img/steam/WEBP/steam_11.webp"
+										src="img/steam/WEBP/steam_10.webp"
 										alt="About me image"
 									/>
 								</picture>
 							</div>
-							<header
-								class="section__content section__content--reversed"
-							>
-								<h3 class="text__category">Sobre Mí</h3>
-								<h2>Vendedor Freelancer</h2>
+							<header class="section__content section__content--reversed">
+								<h3 class="text__category">Acerca de</h3>
+								<h2>Desarrollador Freelancer</h2>
 								<p>
-									¡Hola! Soy John Palacios y
-									<span class="fw-bold">Rysth Design</span> es mi marca
-									personal. Nos especializamos en la venta de juegos
-									digitales para plataformas populares como Steam, Origin,
-									Rockstar, Minecraft y más. Ofrecemos una amplia
-									selección de juegos de alta calidad a precios
-									competitivos junto a una experiencia de compra fácil y
-									segura. Aquí encontrarás juegos de calidad a precios
-									asequibles. ¡No dudes en contactarnos si tienes alguna
-									consulta!.
+									¡Hola! Soy John Palacios, y mi marca personal es
+									<span class="fw-bold">Rysth Design</span>, especializada en
+									la venta en línea de juegos digitales para plataformas
+									populares a precios competitivos. Ofrecemos también servicios
+									de desarrollo web con HTML, CSS y JS para crear sitios web
+									modernos y funcionales. Si necesitas juegos o servicios de
+									desarrollo web, no dudes en contactarnos para obtener más
+									información.
 								</p>
 								<div class="section__buttons">
-									<a
-										class="button button-primary"
-										href="https://tinyurl.com/catalogo-wsp"
-										target="_blank"
-										>Catálogo</a
-									>
 									<a
 										class="button button-primary"
 										href="https://tinyurl.com/contacto-wsp"
@@ -173,13 +158,11 @@
 								class="section__content section__text__center container__sm"
 							>
 								<h3 class="text__category">Nuestros Servicios</h3>
-								<h2>Desarrollador de Chatbots</h2>
+								<h2>Desarrollador Web</h2>
 								<p>
-									¿Eres un apasionado de los videojuegos? ¿Necesitas un
-									chatbot automatizado para tu negocio o emprendimiento?
-									<span class="fw-bold"
-										>¡Estás en el lugar correcto!</span
-									>
+									¿Eres un apasionado de los videojuegos? ¿Necesitas un sitio
+									web moderno para tu negocio o emprendimiento?
+									<span class="fw-bold">¡Estás en el lugar correcto!</span>
 								</p>
 							</header>
 							<div class="grid gap-1 grid-template-3">
@@ -193,46 +176,36 @@
 									</header>
 									<div class="card__content">
 										<p>
-											Le permite acceder a una amplia variedad de
-											títulos<span class="fw-bold"> 100% originales</span>
-											y con garantía de autenticidad con precios económicos.
+											¿Buscas acceder a una amplia variedad de títulos de
+											videojuegos
+											<span class="fw-bold">100% originales y auténticos</span> a
+											precios económicos?
 										</p>
 									</div>
 								</div>
 								<div class="card">
 									<header class="card__title">
-										<i
-											class="card__icon fas fa-palette"
-											aria-hidden="true"
-										></i>
+										<i class="card__icon fas fa-palette" aria-hidden="true"></i>
 										<h3 class="fw-bold">Landing Pages</h3>
 									</header>
 									<div class="card__content">
 										<p>
-											Diseño web con
-											<span class="fw-bold"
-												>HTML/CSS/JS y Bootstrap 5.3</span
-											>
-											te ofrece la posibilidad de tener un sitio web moderno
-											y funcional.
+											¿Quieres tener un sitio web moderno y funcional utilizando
+											<span class="fw-bold">HTML, CSS, JS</span>
+											para tu negocio o proyecto personal?
 										</p>
 									</div>
 								</div>
 								<div class="card">
 									<header class="card__title">
-										<i
-											class="card__icon fa-solid fa-code"
-											aria-hidden="true"
-										></i>
-										<h3 class="fw-bold">Chatbots</h3>
+										<i class="card__icon fas fa-code" aria-hidden="true"></i>
+										<h3 class="fw-bold">Programación</h3>
 									</header>
 									<div class="card__content">
 										<p>
-											Con un
-											<span class="fw-bold"
-												>Chatbot automatizado para Whatsapp</span
-											>, podrás captar la atención de tus clientes
-											potenciales y convertirlos en ventas.
+											¿Necesitas ayuda con la
+											<span class="fw-bold">programación</span> de pequeños
+											proyectos? ¡Estamos aquí para ayudarte!
 										</p>
 									</div>
 								</div>
@@ -302,9 +275,7 @@
 									/>
 								</fieldset>
 								<fieldset class="form__group">
-									<label for="message" class="form__label">
-										Mensaje
-									</label>
+									<label for="message" class="form__label"> Mensaje </label>
 									<textarea
 										class="form__input form__input--textarea"
 										name="message"
@@ -355,8 +326,8 @@
 			</div>
 		</footer>
 
+		<!-- Scroll Reveal Library -->
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script src="js/script.js"></script>
-		<!-- Scroll Reveal Library -->
 	</body>
 </html>
